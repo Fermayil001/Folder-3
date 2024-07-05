@@ -1,0 +1,185 @@
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+
+}
+h2{
+    cursor: pointer;
+}
+
+h2::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: red;
+    /* transform: scale(0); */
+    transform: translate(0px, 0px);
+    transition: 0.5s;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    /* transform: scale(0); */
+    transform: translate(0px, 0px);
+    transition: 0.5s;
+}
+
+h2:hover::before{
+    /* transform: scale(1); */
+    transform: translate(0px, 30px);
+
+}
+h2:hover::after{
+    /* transform: scale(1); */
+    transform: translate(0px, -30px);
+}
+
+/* Test 1 */
+
+/* Test 2 */
+
+
+.btn1{
+    border: none;
+    outline: none;
+    background-color: green;
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    color: white;
+}
+
+.btn1::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border: 3px solid green;
+    transition: 0.5s;
+}
+
+.btn1:hover::before{
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+}
+
+/* Test 2 */
+
+/* ---------------------------- */
+
+
+
+
+.btn2 {
+    margin-top: 40px;
+    background-color: orange;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+    transition: color 0.3s;
+}
+
+.btn2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 0;
+    background-color: blue;
+    transition: 0.6s;
+    z-index: 0;
+}
+
+.btn2:hover::before {
+    height: 100%;
+    width: 160px;
+}
+
+.btn2 span {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* --------------------------------------------- */
+
+
+.end{
+    margin: 40px auto;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.menu li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 15px;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+ul.menu li a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: 0.3s;
+}
+
+ul.menu li a:hover:before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
